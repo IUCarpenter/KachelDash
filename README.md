@@ -1,130 +1,66 @@
-\## KachelDash - Projektarbeit für IU ##
-
+## KachelDash - Projektarbeit für IU ##
 
 https://github.com/IUCarpenter/KachelDash
 
-
 Dieses Projekt implementiert ein Dashboard in Python und Flask anhand einer im Rahmen eines IU-Projekts
-
 entwickelten Architektur.
 
-Ziel: Studienfortschritt darstellen und abschließen aller nötigen Kurse visualisieren.
+Ziel: Studienfortschritt darstellen und Abschließen aller nötigen Kurse visualisieren.
 
-
-
-
-
-Diese README Datei dient als INSTALLATIONSANLEITUNG
+Diese README-Datei dient als INSTALLATIONSANLEITUNG
 
 ---
 
+## FUNKTION ##
 
-
-\## FUNKTION ##
-
-
-
-\- Übersicht als Kachelansicht
-
-\- Modulstatus (Ampel-Logik):
-
-  - grün: Kurs ist bestanden
-
-  - rot: Kurs leider nicht bestanden
-
-  - gelb: Der Kurs ist belegt (in Bearbeitung)
-
-  - grau: nicht belegt und keine Note
-
-\- Kennzahlen:
-
-  - ECTS (Erkämpfte Credits)
-
-  - MEAN (Notendurchschnitt)
-
-\- Persistenz über "data.json" (wird beim ersten Start automatisch erzeugt)
-
-
+- Übersicht als Kachelansicht
+- Modulstatus (Ampel-Logik):
+  - grün: Kurs ist bestanden
+  - rot: Kurs leider nicht bestanden
+  - gelb: Der Kurs ist belegt (in Bearbeitung)
+  - grau: nicht belegt und keine Note
+- Kennzahlen:
+  - ECTS (Erkämpfte Credits)
+  - MEAN (Notendurchschnitt)
+- Persistenz über "data.json" (wird beim ersten Start automatisch erzeugt)
 
 Sonderregel Note 0.0 (Anerkennung):
+- zählt als bestanden (ECTS werden also addiert),
+- zählt nicht in den Notendurchschnitt (MEAN)
 
-\- zählt als vestanden (ECTS werden also addiert),
-
-\- zählt nicht in den Notendurchschnitt (MEAN)
-
-
-
-
-
-Das Dashboard ist intuitiv, zum bearbeiten einzelner Kacheln müssen
-
-die Kacheln mit der linken maustaste ausgewählt werden.
+Das Dashboard ist intuitiv, zum Bearbeiten einzelner Kacheln müssen
+die Kacheln mit der linken Maustaste ausgewählt werden.
 
 ---
 
+__INSTALLATIONSANLEITUNG__
 
+## Voraussetzungen für beide Methoden ##
 
-
-
-\_\_INSTALLATIONSANLEITUNG\_\_
-
-
-
-\## Voraussetzungen für beide Methoden##
-
-
-
-\- Python 3.10+ muss auf dem System installiert sein!!
-
-\- Projektdatein müssen lokal im projektverzeichnis liegen
-
-
+- Python 3.10+ muss auf dem System installiert sein!!
+- Projektdateien müssen lokal im Projektverzeichnis liegen
 
 Für die Installation bietet KachelDash 2 Methoden an:
 
- 
+Methode 1:
 
- 	Methode 1:
+- CLI im Projektverzeichnis starten
+- Folgende Kommandos ausführen:
+  - python -m venv dashenv
+  - dashenv\scripts\activate
+  - pip install flask
+  - python dash.py
 
- 
-
- 		- CLI im projektverzeichnis starten
-
- 
-
- 		Folgende Kommandos ausführen:
-
- 		- python -m venv dashenv
-
- 		- dashenv\\scripts\\activate
-
- 		- pip install flask
-
- 		- python dash.py
+Das Dashboard ist gestartet und kann über:
+http://127.0.0.1:5000 aufgerufen werden
 
 
-
- 		Das Dashboard ist gestartet und kann über:
-
- 		http://127.0.0.1:5000 aufgerufen werden
+Methode 2:
 
 
+- install.bat im Projektverzeichnis aufrufen
+- KachelDash wird installiert
+- KachelDash wird gestartet
 
-
-
- 	Methode 2:
-
-
-
- 		- install.bat im Projektverzeichnis aufrufen
-
- 		- KachelDash wird installiert
-
- 		- KachelDash wird gestartet
-
-
-
- 		Das Dashboard ist gestartet und kann über:
-
- 		http://127.0.0.1:5000 aufgerufen werden
-
+Das Dashboard ist gestartet und kann über:
+http://127.0.0.1:5000 aufgerufen werden
